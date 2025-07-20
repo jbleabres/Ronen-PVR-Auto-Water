@@ -7,7 +7,7 @@
     "host_permissions": ["<all_urls>"],
     "content_scripts": [
       {
-        "matches": ["<all_urls>"],
+        "matches": ["https://pvr.ronencoin.tech/v/farm.php"],
         "js": ["content.js"],
         "run_at": "document_idle"
       }

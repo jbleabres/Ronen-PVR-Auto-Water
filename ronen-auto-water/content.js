@@ -41,7 +41,10 @@
             }
             }, 200);
         } else {
-            console.warn('Target image not found.');
+            const harvestButton = document.querySelector('button.harvest-button');
+            if (harvestButton) {
+                harvestButton.click();
+            }
         }
     }
 })();

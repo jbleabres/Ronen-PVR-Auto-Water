@@ -1,19 +1,22 @@
 {
-    "manifest_version": 3,
-    "name": "Ronen - PVR - Auto Water",
-    "version": "2.0",
-    "description": "Call Water Function on load of page.",
-    "permissions": ["scripting"],
-    "host_permissions": ["<all_urls>"],
-    "content_scripts": [
-      {
-        "matches": ["https://pvr.ronencoin.tech/v/farm.php"],
-        "js": ["content.js"],
-        "run_at": "document_idle"
-      }
-    ],
-    "icons": {
-      "128": "icon.png"
+  "manifest_version": 3,
+  "name": "Ronen - PVR - Auto Water",
+  "version": "2.0",
+  "description": "Automatically clicks Water or Jihoz on farm load.",
+  "host_permissions": [
+    "https://pvr.ronencoin.tech/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://pvr.ronencoin.tech/v/farm",
+        "https://pvr.ronencoin.tech/v/farm.php"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
     }
+  ],
+  "icons": {
+    "128": "icon.png"
   }
-  
+}
